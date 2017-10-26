@@ -86,6 +86,8 @@ bool turtleExist(const string turtlename) {
   return false;
 }
 
+// Gets point that isn't near other turtles
+
 turtlesim::Pose getNonOverlappingPoint(char tType) {
   turtlesim::Pose xp;
   bool tooclose = false;
@@ -126,6 +128,7 @@ turtlesim::Pose getNonOverlappingPoint(char tType) {
   return xp;
 }
 
+// Given a count and turtle type -- Spawn COUNT number of new turtles in appropriate orientation [according to turtle type]
 void createTurtles(char tType, int cnt) {
   int i;
   stringstream tname, cmdstr;

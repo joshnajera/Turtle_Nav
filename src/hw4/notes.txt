@@ -1,0 +1,81 @@
+Note:	HWTest Class has: 
+		- subscribers and listeners-- use these to send movements to?
+			- Subscriber _turtle1sub
+			- Subscriber _xturtlesubs[MAX_TURTLES]
+			- TurtleListener _turtle1listener
+			- TurtleListener _xturtlelistener
+		- sClient and kClient
+
+
+
+
+
+HW4 Functions:
+
+	getNonOverLappingPoint (char tType);	
+	//  Gets point that isn't near other turtles
+
+	turtleExists (const string turtlename)
+	//  Determines if a turtle, turtlename, exists
+
+	topicExists (const string topicname)
+	//  Determines if a topic, topicname, exists
+
+	createTurtles
+	//  Creates COUNT number of tType turtles in appropriate locations
+
+	getDistance (x1, y1, x2, y2)
+	//  Calcululates distance between two points
+
+	isTooClose (x1, y1, x2, y2, threshold)
+	//  Calculates if we are closer than the threshold
+
+	removeTurtle1 ()
+	//  Removes our turtle via 'kClient' call
+
+	
+
+	TurtleListener [Class]
+		- doTest
+		- isOffBoundary
+		- isTooClose
+
+	doTest (const turtlesim::Pose::ConstPtr  &msg)
+	//  CALLBACK FUNC.  Updates turtle pos. & checks boundary/tooClose
+
+	isTooClose ()
+	//  Checks if too close to enemy turtle
+
+	
+
+	XTurtleListener [Class]
+		- doTest
+		- isTooClose
+
+	
+	HWTest [Class]
+		- init
+		- startTest
+		Also has:
+		- NodeHandle
+		- Subscriber _turtle1sub
+		- Subscriber _xturtlesubs[MAX_TURTLES]
+		- TurtleListener _turtle1listener
+		- TurtleListener _xturtlelistener
+	init()
+	//  sets up sClient and kClient
+	//  Creates turtles
+	//  Creates topics
+	//  Creates turtle1 subscriber
+	//  Creates xturtle subscriber(s)
+
+	startTest()
+	//  Menu
+
+
+
+
+
+NOTE:
+	TurtleExists and topicExists are declared but unused in HW4.
+		- Hint that we need to use them to complete hw

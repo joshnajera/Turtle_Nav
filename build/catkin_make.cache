@@ -1,0 +1,2 @@
+hw4
+-DCATKIN_DEVEL_PREFIX=/home/ap0c/Projects/Turtle_Nav/devel -DCMAKE_INSTALL_PREFIX=/home/ap0c/Projects/Turtle_Nav/install -G Unix Makefiles

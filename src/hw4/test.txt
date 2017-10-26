@@ -1,0 +1,6 @@
+NOTE:
+	TurtleExists and topicExists are declared but unused in HW4.
+		- Hint that we need to use them to complete hw
+NOTE:
+	TurtleExists and topicExists are declared but unused in HW4.
+		- Hint that we need to use them to complete hw

@@ -1,0 +1,8 @@
+prefix=/home/ap0c/Projects/Turtle_Nav/devel
+
+Name: hw4
+Description: Description of hw4
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ap0c/Projects/Turtle_Nav/devel/lib 
+Requires: 
