@@ -7,4 +7,9 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/ap0c/Projects/Turtle_Nav/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/ap0c/Projects/Turtle_Nav/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/ap0c/Projects/Turtle_Nav/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/ap0c/Projects/Turtle_Nav/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ap0c/Projects/Turtle_Nav/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/ap0c/Projects/Turtle_Nav/src:$ROS_PACKAGE_PATH"

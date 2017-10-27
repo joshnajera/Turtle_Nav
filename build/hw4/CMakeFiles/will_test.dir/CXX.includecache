@@ -19,6 +19,10 @@ turtlesim/Spawn.h
 -
 turtlesim/Kill.h
 -
+string
+-
+sstream
+-
 
 /opt/ros/kinetic/include/geometry_msgs/Twist.h
 string
