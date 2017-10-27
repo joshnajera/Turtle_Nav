@@ -41,16 +41,24 @@ int main(int argc, char **argv){
 	ros::Rate loop_rate(2);
 	// ros::Subscriber turtSub = n.subscribe<turtlesim::Pose>(tname.str(), 100, &test);
 
-	int turts = 1;
+	int turts = 10;
 	ros::Subscriber Tturts[turts];
 
 	for(int i = 0; i < turts; i ++ ){
 		tname.clear();
 		tname.str("");
 		tname << "/T" << i+1 << "/pose";
-		Tturts[i] = n.subscribe<turtlesim::Pose>(tname.str(), 100, &test);
-		loop_rate.sleep();
-		ros::spinOnce();
+		//Tturts[i] = n.subscribe<turtlesim::Pose>(tname.str(), 100, &test);
+		string name = tname.str();
+		turtlesim::Pose msg;
+		try{
+			msg = *(ros::topic::waitForMessage<turtlesim::Pose>(name, ros::Duration(2)));
+		}
+		catch (int e){
+			ROS_INFO("COULDNT FIND THAT TURT");
+
+		}
+		ROS_INFO("X: %f,  Y: %f", msg.x, msg.y);
 	}
 
    return 0;
